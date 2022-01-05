@@ -34,7 +34,8 @@ class Counters extends React.Component {
   // };
 
   render() {
-    const { onReset, onDelete, onIncrement, counters } = this.props;
+    const { onReset, onDelete, onIncrement, onDecrement, counters } =
+      this.props;
 
     return (
       <div>
@@ -49,6 +50,7 @@ class Counters extends React.Component {
             onIncrement={onIncrement}
             //id={counter.id}
             //selected={true}
+            onDecrement={onDecrement}
             counter={counter}
           >
             <h4>Counter #{counter.id}</h4>
