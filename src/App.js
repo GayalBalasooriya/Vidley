@@ -1,7 +1,7 @@
 import './App.css';
-//import Movies from './components/movies';
-import Counters from './components/counters';
-import NavBar from './components/navbar';
+import Movies from './components/movies';
+//import Counters from './components/counters';
+//import NavBar from './components/navbar';
 import React from 'react';
 
 class App extends React.Component {
@@ -60,9 +60,12 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
-        <NavBar totalCounters={this.state.counters.filter(c=>c.value>0).length}/>
+        {/* <NavBar totalCounters={this.state.counters.filter(c=>c.value>0).length}/>
         <main className="container">
           <Counters counters={this.state.counters} onReset={this.handleReset} onDelete={this.handleDelete} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement}/>
+        </main> */}
+        <main className='container'>
+          <Movies />
         </main>
       </React.Fragment>
     );
